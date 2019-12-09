@@ -77,10 +77,11 @@ function Tween(startVal, endVal, duration, loopCount, mirror, ease, completeCall
 	return Animation.animate(driver, sampler);
 }
 
-
+module.exports = {Tween, Ease}
 
 //EXAMPLE USAGE
 /*
+        const {Tween, Ease} = require('./spark-tween')
 	anim.transform.rotationZ = Tween(-.1, .1, 6, 10000, true, Ease.LINEAR, null);
 	anim.transform.y = Tween(-27, 8, 8, 1, true, Ease.LINEAR, OnRaiseUpComplete);
 	anim.transform.x = Tween(-17, -15, 4, 1000, true, Ease.LINEAR, null);
